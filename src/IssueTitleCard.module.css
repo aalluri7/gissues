@@ -1,0 +1,18 @@
+.card{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.body {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    overflow-wrap: break-word;
+}
