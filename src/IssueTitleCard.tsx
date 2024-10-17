@@ -1,8 +1,9 @@
 import css from "./IssueTitleCard.module.css";
 import { useState, useCallback, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { GithubIssue } from "./Issues"
 
-export const IssueTitleCard = ({ issue }) => {
+export const IssueTitleCard = ({ issue }: { issue: GithubIssue }) => {
   const { title, body } = issue;
   const [open, setOpen] = useState(false);
   const onClick = useCallback(() => {

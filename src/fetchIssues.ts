@@ -1,6 +1,6 @@
 import { github_token } from "./secrets";
 
-export const fetchIssues = async (repoName, setData) => {
+export const fetchIssues = async (repoName:any, setData:any) => {
   const response = await fetch(
     `https://api.github.com/repos/${repoName}/issues?per_page=${10}&page=${1}`,
     {
@@ -13,7 +13,7 @@ export const fetchIssues = async (repoName, setData) => {
     }
   );
   const data = await response.json();
-  const headers = response.headers.entries().toArray();
+  const headers = Array.from(response.headers.entries());
   console.log({ data, headers });
   setData(data);
 };
